@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<!--in-class practice 1 - cosc 2328 - Professor McCurry>
+<!--implemented by Rebecca Markovsky>
+<html>
+	<head>
+		<title>In Class Assignment #1: CSS Practice</title>
+		<!-- Don't forget to link this webpage on your homepage! I'll be checking homepages after the are submitted for the link to this page -->
+		<style>
+		/* is how you comment in CSS */
+			p{text-align:center;}
+			h1,h3{color: blue;}
+			.heading {color:red; font-size: 200%; text-align: right; background-color: green}
+			.classCenter30 {text-align:center; font-size: 30px}
+			img{border: 5px solid #555; width:400px; height: 400px}
+			#color1 {color:#ccdbc;}
+			#color2 {color:"Powder Blue";}
+			#color3 {color: #003249;}
+			#color4 {color: #007ea7;}
+			/* id overrides class */
+		</style>
+	</head>
+	<body style = "background-color = rgb(231,235,197);">
+		<h1 style= "background-color: green; text-align:right;"> This is our first header! </h1>
+		<h3> This is our smaller second header.  </h3>
+		<h1 class="heading" style = "background-color:green; text-align:right;"> This is a third heading tag, however this one has a class</h1>
+		<p id= "color1" class = "classCenter30"> Hey we've got a paragraph! </p>
+		<p id = "color2"> Why not give us a second paragraph tag? </p>
+		<p class="heading" id="color3"> MORE WORDS ARE HERE INSIDE A PARAGRAPH TAG, however we have the heading class for some reason?</p>
+		<p id= "color4"> Here's our last paragragh of the webpage</p>
+		<img id="flowerImg" src="https://search.creativecommons.org/static/img/cc-pdm_icon.svg">
+	</body>
+</html> 
