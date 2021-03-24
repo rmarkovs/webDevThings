@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+  <html>
+    <body>
+      <h2> Creating a JS Object in 2 ways. </h2>
+      <p id = "p1"></p>
+      <p id = "p2"></p>
+    <script>
+      var person1 = {
+      fName: "John",
+      lName: "McCurry",
+      age: 50,
+      job: "Professor"
+      };
+      var person2 = new Object();
+      person2.fName = "John";
+      Person2.lName = "McCurry";
+      person2.age = 50;
+      person2.job = "Professor";
+    document.getElementByld("p1").innerHTML = person1.fName + " is " + person1.age + " years old.";
+    document.getElementByld("p2").innerHTML = person2.fName + " is employed as a " + person2.job;
+    </script>
+  </body>
+</html>

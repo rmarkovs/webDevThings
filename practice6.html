@@ -1,0 +1,51 @@
+<html>
+<head>
+</head>
+<body>
+<script>
+  var count = 0;
+  //tracks entered character
+  function trackCharacter(e)
+  {
+    var uniChar = e.which || e.keyCode;
+    var StrgChar = String.fromCharCode(uniChar);
+    document.getElementById("p1").innerHTML = StrgChar;
+  }
+  //when key is released text is changed
+  function keyReleased(k)
+  {
+    var stringChar = document.getElementByld("txt1");
+    var upperCaseStringChar = stringChar.value.toUpperCase();
+    x.value = upperCaseStringChar;
+
+  }
+  //takes text entered in txt2 and outputs it to myspan
+  //if changed. also performs regex to see if any as in input
+  //if yes change color of myspan to red otherwise to blue
+  function inputChange(x)
+  {
+     var txt3 = x.value;
+     document.getElementByld("myspan").innerHTML = "the character entered is: " + txt3;
+     var reg = /[0-9]/;
+     if(reg.test(txt3))
+     {
+        document.getElementByld("myspan").Style.color = "red";
+     }
+     else
+     {
+      document.getElementByld("myspan").Style.color = "blue";
+     }
+  }
+  //takes input from radio button and outputs to myspan2
+  //changes color of myspan2
+  function inputGiven(x)
+  {
+
+  }
+  function keyCount()
+  {
+
+  }
+  </script>
+  </body>
+  </html>

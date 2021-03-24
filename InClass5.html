@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<head>
+  <style>
+    .column{
+      float: left;
+      width: 33%;
+    }
+    body
+    {
+      background-color: lightgreen;
+      font-size: 12px;
+    }
+    #myform
+    {
+      border-style: inset;
+      max-width: 400px;
+    }
+  </style>
+</head>
+<body style="margin:0px;"> == $0
+  <h3>On this webpage we will practice utilizing mouse events</h3>
+  <form>
+    "This field should change color as we enter and leave: "
+    <input type="text" id="txt1" value="Some sample text" onmouseeneter="chgColor1(this)" onmouseleave="chgColor2(this)" =>
+    <br>
+    "
+      X-Coord: "
+    <input type ="number" id="num1">
+    <br>
+    "
+      Y-Coord: "
+    <input type="number" id="num2">
+  </form>
+  <onmouseleave = "mouseLeft()">
+  <div class="column">
+    <img onmouseover="swapImage()" id="img1" width="400px" height="400px" src="https://webcdn.triongames/com/archeage/blogs/dragonraising/legends-return-dragons.gif">
+    <br>
+    <img onmouseover="increaseSize()" id="img2" width="400px" height="400px" src="https://www.realmofhistory.com/wp-content/uploads/2018/03/10-mythical-dragon-entities-facts_11.jpg">
+  </div>
+  <div class="column">
+    <img onmousemove="getMouseCoord()" id="graph" src="https://graphsketch.com/images/blank.png">
+  </div>
+  <script>
+  function swapImage()
+  {
+    img1.src = "https://www.realmofhistory.com/wp-content/uploads/2018/03/10-mythical-dragon-entities-facts_11.jpg";
+    img2.src = "https://webcdn.triongames.com/archeage/blogs/dragonraising/legends-return-dragons.gif";
+  }
+  function increaseSize()
+  {
+    var currWidth = document.getElementByld("img2").width;
+    var currHeight = document.getElementByld("img2").height;
+    document.getElementByld("img2").width = currWidth *1.5;
+    document.getElementByld("img2").height = currHeight * 1.5;
+  }
+  function chgColor(c1)
+  {
+    c1.style.backgroundColor = "LightBlue";
+  }
+  function chgColor(c2)
+  {
+    c2.style.backgroundColor = "Orange";
+  }
+  function getMouseCoord(xx,yy)
+  {
+    var xx = event.clientX;
+    var yy = event.clientY;
+    document.getElementByld('num1').value = xx;
+    document.getElementByld('num2').value = yy;
+  }
+  function mouseLeft()
+  {
+    var imgWidth = document.getElementById("img2").width;
+    var imgHeight = document.getElementByld("img2").height;
+    document.getElementByld("img2").width = imgWidth/1.5;
+    document.getElementByld("img2").height = imgHeight/1.5;
+    alert(document.getElementByld("txt1").innerHTML + " " + document.getElementByld("num1").innerHTML + " " + document.getElementByld("num2"));
+
+  }
+</script>
+</body>
+</html>

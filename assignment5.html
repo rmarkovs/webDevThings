@@ -1,0 +1,111 @@
+<!--Assignment 5 - COSC 2328 - Professor McCurry -->
+<!-- Implemented by Rebecca Markovsky -->
+<html>
+  <head>
+    <title> Assignment 5 </title>
+    <style>
+    /* CSV */
+      /* ffbe0b,fb5607,ff006e,8338ec,3a86ff */
+
+      /* Array */
+      /* ["ffbe0b","fb5607","ff006e","8338ec","3a86ff"] */
+
+      /* Object */
+      /* {"Mango":"ffbe0b","Orange Pantone":"fb5607","Winter Sky":"ff006e","Blue Violet":"8338ec","Azure":"3a86ff"} */
+
+      /* Extended Array */
+      /* [{"name":"Mango","hex":"ffbe0b","rgb":[255,190,11],"cmyk":[0,25,96,0],"hsb":[44,96,100],"hsl":[44,100,52],"lab":[81,11,82]},{"name":"Orange Pantone","hex":"fb5607","rgb":[251,86,7],"cmyk":[0,66,97,2],"hsb":[19,97,98],"hsl":[19,97,51],"lab":[59,60,68]},{"name":"Winter Sky","hex":"ff006e","rgb":[255,0,110],"cmyk":[0,100,57,0],"hsb":[334,100,100],"hsl":[334,100,50],"lab":[54,83,14]},{"name":"Blue Violet","hex":"8338ec","rgb":[131,56,236],"cmyk":[44,76,0,7],"hsb":[265,76,93],"hsl":[265,83,57],"lab":[44,66,-78]},{"name":"Azure","hex":"3a86ff","rgb":[58,134,255],"cmyk":[77,47,0,0],"hsb":[217,77,100],"hsl":[217,100,61],"lab":[57,18,-67]}] */
+      background-color: rgb(255, 190, 11);
+      h1{color: rgb(58, 134, 255);}
+      h2{color: rgb(131, 56, 236);}
+    </style>
+    <body>
+      <h1> Assignment 5 </h1>
+      <h2> Welcome! </h2>
+      <p>
+        <form id = "asg5">
+        Username: <input type = "text" name = "username" id = "user">
+        <br>
+        Email: <input type = "text" name = "email" id = "mail">
+        <br>
+        First Number (1-100): <input type = "number" name = "first_number" id = "num1">
+        <br>
+        Second Number (1-100): <input type = "number" name = "second_number" id = "num2">
+        <br>
+        Select operation:
+        <input type = "radio" name = "operation" value = "-" id = "subtract">
+        <input type = "radio" name = "operation" value = "+" id = "add">
+        <input type = "radio" name = "operation" value = "*" id = "multiply">
+        <input type = "radio" name = "operation" value = "/" id = "divide">
+        <input type = "radio" name = "operation" value = "%" id = "remainder">
+        <br>
+        Answer text color: <input type = "color" name = "answer_color" id = "myColor">
+        <br>
+      </form>
+        <p id = "p1"></p>
+        <p id = "p2"></p>
+        Functions:
+        <button onclick = "registration()"> Register </button>
+        <button onclick = "the_math()"> Solve</button>
+        <button onclick = "change_color()">Change Color</button>
+        <br>
+      <script>
+        function registration()
+        {
+          var the_user = document.getElementsByName('username');
+          var the_email = document.getElementsByName('email');
+          document.getElementByld('p1').innerHTML = "Welcome " + the_user + "! You are registered at " + the_email;
+        }
+        function the_math()
+        {
+          var math_operation = document.getElementByName('operation');
+          var first_num = document.getElementByld('num1');
+          var second_num = document.getElementByld('num2');
+          var result = 0;
+          errorM = "nothing selected";
+          invalidNum = "invalid number"
+          if((first_num<1) || (first_num>100) || (second_num<1) || (second_num>100))
+          {
+            document.getElementByld('p2').innerHTML = invalidNum;
+          }
+          else {
+            if(math_operation[0].checked)
+            {
+              result = first_num - second_num;
+              document.getElementByld('p2').innerHTML = result;
+            }
+            else if(math_operation[1].checked)
+            {
+              result = first_num + second_num;
+              document.getElementByld('p2').innerHTML = result;
+            }
+            else if(math_operation[2].checked)
+            {
+              result = first_num * second_num;
+              document.getElementByld('p2').innerHTML = result;
+            }
+            else if(math_operation[3].checked)
+            {
+              result = first_num / second_num;
+              document.getElementByld('p2').innerHTML = result;
+            }
+            else if(math_operation[4].checked)
+            {
+              result = first_num % second_num;
+              document.getElementByld('p2').innerHTML = result;
+            }
+            else
+            {
+              document.getElementByld('p2').innerHTML = errorM;
+            }
+          }
+        }
+        function change_color()
+        {
+          var newColor = document.getElementByName('answer_color');
+          document.getElementByld('p2').style.color = newColor;
+          document.getElementByld('p1').style.color = newColor;
+        }
+      </script>
+    </body>
+    </html>

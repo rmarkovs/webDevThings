@@ -1,0 +1,28 @@
+<script>
+//this function will add a new text input field to the above
+function addtable()
+{
+  //first create table itself and a break tag
+  var mytable = document.createElement("table");
+  var mybreak = document.createElement("br");
+  //to prevent code from getting made at declearing a var over and over we define outside of the loop
+  var myrow;
+  var mydata;
+  //place table on webpage
+  document.body.appendChild(mytable);
+  for(i=0; i<5; i++)
+  {
+    //create row object and place into webpage
+    myrow = docutment.createElement("tr");
+    mytable.appendChild(myrow);
+      for(j = 0; j< 5; j++)
+      {
+        //create table data object give text and place into above defined row Object
+        mydata = document.createElement("td");
+        mydata.innerHTML = "Row: " + i + " Column: " + j;
+        myrow.appendChild(mydata)
+      }
+  }
+  document.body.appendChild(mybreak);
+}
+</script>

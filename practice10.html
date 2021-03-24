@@ -1,0 +1,14 @@
+<script>
+  //this function will add a new text input field to the form
+  count = 0;
+  function addfield()
+  {
+    count++;
+    var mytext = document.createElement("input");
+    var mybreak = document.createElement("br");
+    mytext.setAttribute("type","text");
+    mytext.setAttribute("value","text field:" + count);
+    document.getElementByld('myform').appendChild(mytext);
+    document.getElementByld('myform').appendChild(mybreak);
+  }
+</script>

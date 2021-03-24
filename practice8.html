@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      p{color:blue;}
+    </style>
+  </head>
+  <body>
+    <p> Click the button to make a BUTTON element with text</p>
+    <button onclick="myFunction()">Try it</button>
+  <script>
+    function myFunction()
+    {
+      var btn = document.createElement("BUTTON");
+      btn.textContent = "look we've made a button!";
+      document.body.appendChild(btn);
+    }
+  </script>
+  </body>
+</html>
