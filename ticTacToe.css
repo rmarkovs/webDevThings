@@ -1,0 +1,15 @@
+/* CSS file */
+/*Assignment 6 COSC 2328 Professor McCurry */
+/* Implemented by Rebecca Markovsky */
+
+body {
+font-family: "Times New Roman", serif;
+}
+section {
+text-align: center;
+}
+.gameCell{
+width = 150px;
+height = 150px;
+cursor: pointer;
+}
